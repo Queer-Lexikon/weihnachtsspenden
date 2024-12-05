@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yay, Postkarten!</title>
+    <link rel="stylesheet" type="text/css" href="reset.css" />
+    <link rel="stylesheet" type="text/css" href="generic.css" />
+  </head>
+  <body>
+    <div id="top" class="page" role="document">
+      <main role="main">
+        <section id="forms">
+          <header>
+            <h1>Eine Postkarte für deine Unterstützung</h1>
+          </header>
+          <section>
+            <p>
+              Hallo, wir sind das Queer Lexikon und wir bieten seit über 10
+              Jahren online Informations- und Unterstützungs&shy;angebote zu
+              sexueller, geschlechtlicher und romantischer Vielfalt für das
+              ganze deutsch&shy;sprachige Europa. Unsere Arbeit ist als
+              gemeinnützig anerkannt und fast vollständig durch Spenden
+              finanziert.
+            </p>
+            <p>
+              Dieses Jahr zu Weihnachten möchten wir anbieten, spenden auch zu
+              verschenken. Und das geht so: Du spendest einen Betrag deiner
+              Wahl, und gibst an, wem du Spende schenkst. Darüber können wir
+              später zuordnen, falls die Person eine Spenden&shy;bescheinigung
+              ausgestellt haben möchte. Den gewünschten Betrag buchen wir den
+              kommenden Tagen direkt bequem per Lastschrift bei dir ab. Du
+              bekommst direkt eine Karte zum Ausdrucken und symbolisch
+              verschenken mit deiner Spende.
+            </p>
+            <p>
+              Wenn du direkt selbst spenden möchtest, kannst du bequem über
+              unsere
+              <a href="https://qlx.li/betterplace"
+                >Projektseite bei betterplace</a
+              >.
+            </p>
+          </section>
+          <form>
+            <fieldset>
+              <legend>1. Eckdaten</legend>
+              <p>
+                <label for="accountname"
+                  >Name (wie wir dich nennen sollen)</label
+                >
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Alex Einhorn"
+                  required
+                />
+              </p>
+
+              <p>
+                <label for="email">Deine Mailadresse</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="text"
+                  placeholder=""
+                  required
+                />
+              </p>
+              <p>
+                Gewünschter Beitrag: <br />
+                <span id="amountButtons">
+                  <button id="two" data-amount="2">2 €</button>
+                  <button id="five" data-amount="5">5 €</button>
+                  <button id="ten" data-amount="10">10 €</button>
+                  <button id="twentyfive" data-amount="25">25 €</button>
+                </span>
+                <br /><br />
+                <label for="amount">Oder individuell festlegen</label>
+                <input
+                  id="amount"
+                  name="amount"
+                  type="number"
+                  value="10"
+                  min="1"
+                  step="0.01"
+                  size="4"
+                />
+              </p>
+            </fieldset>
+
+            <fieldset id="forms__select">
+              <legend>2. Bankdaten</legend>
+              <p>
+                <em>Wir ziehen deine Beiträge bequem per Bankeinzug ein.</em>
+              </p>
+              <p>
+                <label for="accountname"
+                  >Name (wie bei der Bank hinterlegt)</label
+                >
+                <input
+                  id="accountname"
+                  name="accountname"
+                  type="text"
+                  placeholder="Alex Einhorn"
+                  required
+                />
+              </p>
+
+              <p>
+                <label for="iban">IBAN</label>
+                <input
+                  id="iban"
+                  name="iban"
+                  type="text"
+                  placeholder="XX11 2222 3333 4444 5555 66"
+                  required
+                  size="25"
+                />
+              </p>
+            </fieldset>
+
+            <fieldset>
+              <legend>3. Schenken</legend>
+              <p>
+                <em
+                  >Dass wir deine Spende der beschenkten Person später für eine
+                  Spendenbescheinigung zuordnen können, verrate uns bitte, wem
+                  du sie schenken magst.</em
+                >
+              </p>
+              <p>
+                <label for="doneename">Name der beschenkten Person</label>
+                <input
+                  id="doneename"
+                  name="doneename"
+                  type="text"
+                  placeholder="Charly Chamäleon"
+                  required
+                />
+              </p>
+              <p>
+                <label for="doneecheck"
+                  >Kennwort für die beschenkten Person</label
+                >
+                <input
+                  id="doneecheck"
+                  name="doneecheck"
+                  type="text"
+                  value="Weinnachtsgeschenk"
+                  required
+                />
+              </p>
+            </fieldset>
+
+            <fieldset>
+              <legend>4. Fast geschafft!</legend>
+              <p>
+                <input id="sepa" name="sepa" type="checkbox" required />
+                <label for="sepa"
+                  >Bist du mit der Zahlung per Bankeinzug einverstanden?</label
+                >
+              </p>
+              <p>
+                <em
+                  >Mit dem Abschicken löst du eine Spende aus. Bitte
+                  vergewissere dich, dass alles passt.</em
+                >
+              </p>
+              <input type="submit" id="submit" value="Spende verschenken" />
+            </fieldset>
+          </form>
+        </section>
+
+        <section>
+          <header>
+            <h2>Das "Kleingedruckte"</h2>
+          </header>
+          <p>
+            Wir nutzen die hier erhobenen Daten ausschließlich um deine Spende
+            zu verarbeiten. Ansonsten gelten unsere
+            <a href="https://queer-lexikon.net/datenschutz/"
+              >Datenschutzbestimmungen.</a
+            >
+          </p>
+        </section>
+      </main>
+
+      <footer>
+        Ein Aktion vom
+        <a href="https://queer-lexikon.net/impressum/">Queer Lexikon e.V.</a>.
+      </footer>
+    </div>
+    <script>
+      const amount = document.getElementById("amount");
+
+      const amountButtons = document.getElementById("amountButtons");
+      amountButtons.addEventListener("click", (event) => {
+        event.preventDefault();
+        const amounta = event.target.dataset.amount;
+        amount.value = amounta;
+      });
+
+      const formElement = document.querySelector("form");
+      formElement.addEventListener("submit", (event) => {
+        event.preventDefault();
+        fd = new FormData(formElement);
+        submitData(fd, event);
+      });
+
+      async function submitData(fd, event) {
+        payload = {
+          name: fd.get("name"),
+          email: fd.get("email"),
+          amount: fd.get("amount") * 100,
+          account: {
+            name: fd.get("accountname"),
+            iban: fd.get("iban"),
+            agreement: fd.get("sepa") == "on",
+          },
+          donee: {
+            name: fd.get("doneename"),
+            keyword: fd.get("doneecheck"),
+          },
+        };
+        console.log(JSON.stringify(payload));
+        const response = await fetch("/generate", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+        const responseData = await response.json();
+        if (responseData.success) {
+          const form = document.querySelector("form");
+          form.insertAdjacentHTML(
+            "beforebegin",
+            "<p class='highlight'>Vielen Dank fürs Verschenken!</p>"
+          );
+          form.remove();
+          setCurrent();
+        } else {
+          window.alert(responseData.detail[0].msg.slice(13));
+        }
+        console.log(responseData);
+      }
+    </script>
+  </body>
+</html>
